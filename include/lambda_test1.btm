@@ -1,0 +1,48 @@
+class Main
+{
+    void <------------- (int[], int, int) lambda = [this](int[] arr, int start, int stop)
+    ------------------------------------------------------------------------------------>
+    void { 
+        var out = new TextIO();
+        var i = 0;
+        for (i = start; i < stop; ++i) {
+            out.putInt(arr[i]);
+        }          
+    };
+
+    void main()
+    {
+        var submain = new SubMain();
+        submain.dothething();
+
+
+        var lorem = [this](int[] list, int index)-->int {
+            submain.dothething();
+            return 0;
+        };
+
+    }
+}
+
+class SubMain extends Main
+{
+    void dothething()
+    {
+        var a = new int[3];
+        a[0] = 1;
+        a[1] = 2;
+        a[2] = 3;
+        var b = new int[3];
+        b[0] = 4;
+        b[1] = 5;
+        b[2] = 6;
+        var c = new int[3];
+        c[0] = 7;
+        c[1] = 8;
+        c[2] = 9;
+
+        lambda(a, 0, 3);
+        this.lambda(b, 0, 3);
+        super.lambda(c, 0, 3);
+    }
+}

@@ -1,0 +1,136 @@
+class Foo {
+    int i;
+    int foo() { return 3; }
+}
+
+class Main extends Foo {
+    int b;
+    int c;
+    int i;
+
+    int foo() { return 2; }
+
+    void main() {
+        var io = new TextIO();
+
+        /* testing var expr */
+        var i = 1;
+        this.i = 2;
+        super.i = 3;
+
+        io.putInt(i);        // 1
+        io.putInt(this.i);   // 2
+        io.putInt(super.i);  // 3
+
+        var lorem = 2;
+        lorem = foo(); // produces  Exception 4  [Address error in inst/data fetch]
+
+        /* testing dispatch expr */
+        io.putString("\n    ");
+        io.putInt(lorem);        // 2 
+        io.putInt(this.foo());   // 2
+        io.putInt(super.foo());  // 3
+
+        /* test for loop and nested for loop */
+        io.putString("\n   ");
+        for (i = 0; i < 10; i ++) {
+            io.putInt(i); // 0123456789
+        }
+        io.putString("\n   ");
+        for (i = 0; i < 4; i ++) {
+            var j = 0;
+            for (j = 0; j < 2; j ++) {
+                io.putInt(i + j); // 01122334
+            }
+        }
+
+        /* test while loop and nested while loop */
+        io.putString("\n   ");
+        i = 3;
+        while(i > 0) {
+            io.putInt(i); //321
+            --i;
+        }
+        io.putString("\n   ");
+        i = 0;
+        while(i < 4) {
+            var j = 0;
+            while (j < 4) {
+                io.putInt(j); // 0123012301230123
+                ++j;
+            }
+            i++;
+        }
+
+        /* test various if else statements */
+        if (true) {
+            io.putString("   this is expected\n"); // this is expected
+        }
+
+        if (false) {
+            io.putString("this is not the print statement you are looking for\n");
+        } else if(true) {
+            io.putString("   this is also expected\n"); // this is also expected
+        }
+
+        if (false) {
+            io.putString("this is not the print statement you are looking for\n");
+        } else {
+            io.putString("   honestly, this is even more expected\n"); // honestly, this is even more expected
+        }
+
+        if (true) {
+            if (false) {
+                io.putString("this is not the print statement you are looking for\n");
+            } else {
+                if (true) {
+
+                } else if (true) {
+                    io.putString("this is not the print statement you are looking for\n");
+                } else {
+                    io.putString("this is not the print statement you are looking for\n");
+                }
+                io.putString("   It is a far, far better thing that I do, than I have ever done; it is a far, far better rest that I go to than I have ever known.\n"); // It is a far, far better thing that I do, than I have ever done; it is a far, far better rest that I go to than I have ever known.
+            }
+        } else {
+            io.putString("this is not the print statement you are looking for\n");
+        }
+
+        /* check cast */
+        var m = new Main();
+        var g = cast(Foo, m);
+        io.putString("   ");
+        io.putInt(g.foo());
+
+        /* check instanceof */
+        if(m instanceof Foo) {
+            io.putString("   eat more chikun"); // eat more chikun
+        }
+
+        if(g instanceof Main) {
+            io.putString("   eat more cows"); // this wont run because you should just eat chicken
+        }
+
+        /* check break */
+        i = 0;
+        while(i < 1000) {
+            io.putString("   it was the best of times.\n"); // it was the best of times.
+            break;
+            io.putString("   if this executes, then Windows > Linux\n");
+        }
+
+        /* check binaries */
+        io.putString("   ");
+        var z = 1 + 2 / 3 - 10 * 11 % 2 > 10 && true || false;
+        if (!z) {
+            io.putString("Some people say that there is nothing better to do than code functionally. With a lisp I said \"I agree\"\n"); // Some people say that there is nothing better to do than code functionally. With a lisp I said "I agree"
+        }
+
+        /* check negation unary */
+        if (!false) {
+            io.putString("   it was not not not the worst of times.\n"); // it was not not not the worst of times  (thus it was the best of times)
+        }
+
+        return;
+    }
+}

@@ -1,0 +1,29 @@
+class Main {
+    void main() {
+        while(false) {
+            break;
+            if (true) {
+                break;
+            } else {
+
+    return;
+}
+
+          
+            
+            var i = 10;
+            
+           
+        }
+        var i = 10;
+        while(true) {
+            for (i = 0; i < 10; i ++) {
+                var i = 10;
+            }
+        } 
+       // return;
+        // dead code begin
+        var i = 10;
+    }
+
+}

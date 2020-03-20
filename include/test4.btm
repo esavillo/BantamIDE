@@ -1,0 +1,47 @@
+class A { 
+    String giant_heart = "inside a duck at the bottom of a well in a courtyard in a castle at the center of a lake on a mountain on a planet";
+    
+    String foo(){
+        return "A\n";  
+    }
+}
+class B extends A {
+     String foo(){
+        return super.foo();  
+    }
+
+    A getSuper()
+    {
+        return super;
+    }
+}
+
+class C extends B {
+    String foo() {
+        return super.foo();
+    }
+}
+
+class D extends C {
+    D zoo () {
+        return this;
+    }
+    
+    C foo() {
+        return super;
+    }
+}
+
+
+class Main { 
+    String foo() { return "Hello!"; }
+    void main() {
+        var io = new TextIO();
+        var d = new D();
+        io.putString(d.zoo().foo().foo());
+
+
+        return;
+    }
+}
+

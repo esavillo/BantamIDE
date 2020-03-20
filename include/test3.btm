@@ -1,0 +1,12 @@
+class A {}
+class B extends A {}
+
+class Main { 
+    String foo() { return "Hello!"; }
+
+    void main() {
+        var io = new TextIO();
+        io.putString(foo());
+        return;
+    }
+}

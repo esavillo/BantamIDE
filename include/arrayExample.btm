@@ -1,0 +1,34 @@
+class Main {
+    TextIO out = new TextIO();
+
+    void main() {
+        var x = 0;
+        var subFoo = new SubFoo();
+        subFoo.assignThis(x);    
+        out.putInt(subFoo.i[x]);
+        out.putInt(subFoo.getI(1));
+        subFoo.assignSuper(x);    
+        out.putInt(subFoo.getSuperI(x));
+    }
+}
+
+class Foo {
+    int[] i = new int[9];
+}
+
+class SubFoo extends Foo {
+    int[] i = new int[2];
+    void assignThis(int x) {
+        this.i[x] = 19;
+        this.i[1]++;
+    }    
+    void assignSuper(int x) {
+        super.i[x] = 29;
+    }          
+    int getI(int x) {
+        return this.i[x];
+    }
+    int getSuperI(int x) {
+        return super.i[x];
+    }
+}

@@ -1,0 +1,65 @@
+/*
+NOTE: THIS FILE SHOULD __NOT__ WORK
+*/
+
+class Main
+{
+    void <------------- (int, int, int) lambda = [this](int arr, int start, int stop)
+    ------------------------------------------------------------------------------------>
+    void { 
+        var out = new TextIO();
+        var i = 0;
+        out.putInt(arr);
+        out.putInt(start);
+        out.putInt(stop);
+//        for (i = start; i < stop; ++i) {
+//            out.putInt(arr[i]);
+//        }          
+    };
+
+    void main()
+    {
+        var submain = new SubMain();
+//        submain.dothething();
+
+
+        var lorem = [](int list, int index)-->int {
+            var anothervar = 9;
+            submain.dothething();
+            
+            var ipsum = [](int x) ---> int {
+                return anothervar;
+            };      
+
+            return 0;
+        };
+
+        lorem(2, 3);
+    }
+}
+
+class SubMain extends Main
+{
+    void dothething()
+    {
+//        var a = new int[3];
+//        a[0] = 1;
+//        a[1] = 2;
+//        a[2] = 3;
+//        var b = new int[3];
+//        b[0] = 4;
+//        b[1] = 5;
+//        b[2] = 6;
+//        var c = new int[3];
+//        c[0] = 7;
+//        c[1] = 8;
+//        c[2] = 9;
+//
+//        lambda(a, 0, 3);
+//        this.lambda(b, 0, 3);
+//        super.lambda(c, 0, 3);
+        lambda(1, 2, 3);
+        this.lambda(4, 5, 6);
+        super.lambda(7, 8, 9);
+    }
+}

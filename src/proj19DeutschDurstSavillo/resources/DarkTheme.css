@@ -1,0 +1,236 @@
+/**
+ * File: DarkMode.css
+ * Names: Kevin Ahn, Lucas DeGraw, Jackie Hang, Kyle Slager
+ * Class: CS 361
+ * Project 6
+ * Date: October 26, 2018
+ */
+
+ /**
+  * File: DarkMode.css
+  * Names: Zena Abulhab, Yi Feng, Melody Mao, Evan Savillo
+  * Class: CS 361
+  * Project 7
+  * Date: October 31, 2018
+  * Changed colors when hovering over menu items
+  */
+
+#vBox {
+    -fx-background-color: #535353;
+    -fx-base: gray;
+}
+
+
+#compileButton {
+    -fx-font: 13 arial;
+    -fx-base: #3399ff;
+    -fx-background-radius: 100;
+}
+
+#compileRunButton {
+    -fx-font: 13 arial;
+    -fx-base: #00ff80;
+    -fx-background-radius: 100;
+}
+
+#stopButton {
+    -fx-font: 13 arial;
+    -fx-base: red;
+    -fx-background-radius: 100;
+}
+
+#javaTabPane {
+    -pref-height: 200px;
+    -pref-width: 200px;
+}
+
+#horizontalSplitPane {
+    -fx-base: gray;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #535353;
+}
+
+
+.code-area {
+    -fx-background-color: #404040;
+}
+
+#console{
+     -fx-background-color: #404040;
+}
+
+.context-menu {
+    -fx-background-color: gray;
+}
+.menu-item{
+    -fx-background-color: #737373;
+}
+.menu-item .text{
+    -fx-fill: white;
+}
+
+.menu-item:focused {
+    -fx-background-color:white;
+}
+
+.menu-item:focused .text {
+    -fx-fill: black;
+}
+
+.menu-bar{
+    -fx-background-color: #666666;
+}
+
+.tab-pane{
+    -fx-background-color: #737373;
+}
+
+.tab{
+    -fx-background-color: #666666;
+}
+
+.code-area{
+    -fx-background-color: #404040;
+}
+
+.tool-bar{
+    -fx-background-color:#8c8c8c;
+}
+
+.text {
+    -fx-fill: ghostwhite;
+}
+
+.keyword {
+    -fx-fill: #cc8400;
+    -fx-font-weight: bold;
+}
+
+.semicolon {
+    -fx-font-weight: bold;
+}
+
+.bracket {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: #00d110;
+}
+
+.comment {
+    -fx-fill: #768fb8;
+}
+
+.intconst {
+    -fx-fill: magenta;
+}
+
+.err {
+    -fx-fill: red;
+}
+
+.cons {
+    -fx-fill: lightgreen;
+}
+
+.normal {
+    -fx-fill: white;
+}
+.paragraph-box:has-caret {
+    -fx-background-color: #595959;
+}
+
+.lineno{
+    -fx-background-color: #363636;
+}
+
+.tree-cell {
+    -fx-background-color: #404040;
+    -fx-text-fill: white ;
+}
+
+.tree-cell:selected {
+  -fx-background-color: grey;
+}
+
+/* Toolbar CSS */
+#toolBar Button {
+    -fx-font: 14 arial;
+    -fx-background-radius: 10px;
+    -fx-text-fill: black;
+    -fx-border-radius: 15px;
+    -fx-border-width: 3px;
+    -fx-border-color: #8c8c8c;
+}
+
+#toolBar Button:hover {
+    -fx-cursor: hand;
+}
+
+#scanButton {
+    -fx-base: darkorchid;
+}
+
+#scanAndParseButton {
+    -fx-base: maroon;
+}
+
+#scanParseCheckButton {
+    -fx-base: darkcyan;
+}
+
+#cycleAnalysisButton {
+    -fx-base: orange;
+}
+
+#assembleButton {
+    -fx-base: darkgreen;
+}
+
+#assembleAndRunButton {
+    -fx-base: purple;
+}
+
+.label {
+    -fx-fill: #cc8400;
+    -fx-font-weight: bold;
+}
+
+.macroparameter {
+    -fx-fill: lightcoral;
+}
+
+.directive {
+    -fx-fill: orchid;
+    -fx-font-weight: bold;
+}
+
+.character {
+    -fx-fill: darkkhaki;
+}
+
+.register {
+    -fx-fill: sandybrown;
+    -fx-font-style: italic;
+}
+
+.instruction {
+    -fx-fill: cadetblue;
+    -fx-font-weight: bold;
+}
+
+.numeric {
+    -fx-fill: mediumspringgreen;
+}
+
+.paren {
+    -fx-fill: tomato;
+    -fx-font-weight: bold;
+}

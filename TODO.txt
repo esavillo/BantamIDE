@@ -1,0 +1,4 @@
+1. writing the array_init routine for the class Object[]
+2. generating the code for ArrayExpr, NewArrayExpr, and ArrayAssignExpr
+3. generating the code for VarExpr that involves an array
+4. adding runtime error checks to the code for all these nodes

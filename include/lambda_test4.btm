@@ -1,0 +1,22 @@
+class Main {
+    void main() {}
+}
+
+class Foo {
+   int[] <-- (int[]) filter_out_zeros = [](int[] list)-->int[] {
+       var len = 10; // should not actually be hardcoded here.
+
+       var return_list = new int[len];
+
+       var i = 0; // counter for loop
+       var j = 0; // counter for the return list
+
+
+        for(i = 0; i < j; i++) {
+
+        }
+
+
+       return return_list;
+   };
+}

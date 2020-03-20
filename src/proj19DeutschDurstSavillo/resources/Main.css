@@ -1,0 +1,121 @@
+/*
+ * File: Main.css
+ * F18 CS361 Project 7
+ * Names: Melody Mao, Zena Abulhab, Yi Feng, Evan Savillo
+ * Cascading Style Sheet for Main.java, defining the design styles of the GUI elements
+ * Date: 10/27/2018
+ */
+
+
+/* Toolbar CSS */
+#toolBar Button {
+    -fx-font: 14 arial;
+    -fx-background-radius: 10px;
+    -fx-text-fill: black;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+    -fx-border-color: ghostwhite;
+}
+
+#toolBar Button:hover {
+    -fx-cursor: hand;
+}
+
+#scanButton {
+    -fx-base: lightsteelblue;
+}
+
+#scanAndParseButton {
+    -fx-base: mediumspringgreen;
+}
+
+#mainButton {
+    -fx-base: indianred;
+}
+
+#strConstButton {
+    -fx-base: indianred;
+}
+
+#localVarNumButton {
+    -fx-base: indianred;
+}
+
+
+/* style of keywords */
+.keyword, .instruction {
+    -fx-fill: purple;
+    -fx-font-weight: bold;
+}
+
+/* style of semicolons */
+.semicolon {
+    -fx-font-weight: bold;
+}
+
+/* style of parenthesis */
+.paren {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+
+/* style of brackets */
+.bracket {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+
+/* style of braces */
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+
+/* style of strings */
+.string {
+    -fx-fill: blue;
+}
+
+.character {
+    -fx-fill: blue;
+}
+
+/* style of integers */
+.integer {
+    -fx-fill: firebrick;
+}
+
+/* style of comments */
+.comment {
+	-fx-fill: cadetblue;
+}
+
+/* style of paragraph boxes */
+.paragraph-box:has-caret {
+    -fx-background-color: #f2f9fc;
+}
+
+.menu-item {
+  -fx-text-fill: mediumspringgreen;
+}
+
+.menu-item:focused {
+  -fx-text-fill: springgreen;
+}
+
+.label {
+    -fx-fill: goldenrod;
+    -fx-font-weight: bold;
+}
+
+.macroparameter {
+    -fx-fill: beige;
+}
+
+.directive {
+    -fx-fill: magenta;
+}
+
+.register {
+    -fx-fill: salmon;
+}

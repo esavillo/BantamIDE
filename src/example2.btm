@@ -1,0 +1,125 @@
+class Main {
+    int test() {
+        if (true) {
+            if (true) {
+                return 10;
+            }
+            if (true) {}
+
+            return 10;
+        } else {
+             if (true) {
+                 if (true) {
+                     if (true) {
+                         return 10;
+                     }
+                 }
+
+                 return 10;
+             }
+        }
+
+        return 10;
+    }
+
+    int someWhiles() {
+        while(true) {
+            while(true) { return 11; }
+            while(true) {
+                while(true) { return 12; }
+            }
+            while(true) {}
+        }
+
+        while(true) {}
+
+        return 10;
+    }
+
+    void fors() {
+        var i = 0;
+        for (i = 0; i < 4; i ++) {
+            for (i = 0; i < 4; i ++) {
+                for (i = 0; i < 4; i ++) {
+                    for (i = 0; i < 4; i ++) {
+                        break;
+                    }
+                }
+            }
+            break;
+        }
+
+        return;
+    }
+
+    void TestOfTotality() {
+       var i = 0;
+       if (true) {
+            while(false) {
+                if (true) {
+                    return;
+                } else {
+                    for (i = 0; i < 10; i ++) {
+                        for (i = 0; i < 10; i ++) {
+                            while(true) {}
+                            while(true) {
+                                break;
+                            }
+                            if (true) {
+                                if(true) {}
+                                else {
+                                if(true) {
+                                    return;
+                                }
+                                else {
+                                        if(true) {}
+                                        else {
+                                            return;
+                                        }
+                                    }
+                                }
+                                return;
+                            }
+                        }
+
+                        break;
+                    }
+                }
+            }
+
+            for (i = 0; i < 10; i ++) {
+                break;
+            }
+
+            return;
+        }
+      return;
+    }
+
+    void zoo() {
+        while (true) {
+           if (true) {
+               break;
+           }
+        }
+
+        return;
+        while (true) {
+           if (true) {
+               break;
+           }
+        }
+
+while (true) {
+           if (true) {
+               break;
+           }
+        }
+
+    }
+
+    void main() {
+
+    }
+
+}

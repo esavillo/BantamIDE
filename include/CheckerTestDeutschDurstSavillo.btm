@@ -1,0 +1,220 @@
+/*
+ * File: CheckerTestDeutschDurstSavillo.btm
+ * S19 CS461 Project 12
+ * Names: Martin Deutsch, Evan Savillo and Robert Durst
+ * Date: 2/25/19
+ * This file contains the Bantam Java test file for the semantic analyzer.
+ */
+/*
+/* Checking for cyclic inheritance */
+class A extends C {
+  int x = 9;
+}
+
+class B extends A {
+
+}
+
+class C extends B {
+  int y = 10;
+}
+
+/* Checking for two classes of same name */
+class D extends A {
+
+}
+
+class D {
+
+}
+
+/* Checking for inheriting from undefined class */
+class E extends Undef {
+
+}
+
+class F {}
+
+class G {
+    /* Checking for proper subclass assignment */
+    B lorem = new A(); //correct
+    B ipsum = new F(); //incorrect
+
+    /* Checking for proper subclass assignment (array) */
+    B[] dolor = new A[5]; //correct
+    B[] sit = new F[2]; //incorrect
+}
+
+/* Checking for duplicate members */
+class MemberTest {
+  int a = 9;
+  int b = 10;
+  /* Checking for an already declared field */
+  int a;
+
+  void foo() {}
+  int bar() {}
+  /* Checking for already declared method */
+  boolean foo(int param) {}
+}
+
+/* Checking for inherited duplicate members */
+class MemberTest2 extends MemberTest {
+    Object b;
+    void bar() {}
+}
+
+/* Checking for reserved words */
+class ReservedWords {
+        String null = "error";
+        String this = "error";
+        String super = "error";
+        String void = "error";
+        String int = "error";
+        String boolean = "error";
+
+    void produceError() {
+        var null = "error";
+        var this = "error";
+        var super = "error";
+        var void = "error";
+        var int = "error";
+        var boolean = "error";
+    }
+}
+
+/* Checking for main method within Main class */
+class ADream
+{
+    int lorem = 300;
+
+    void main() {}
+    int getLorem()
+    {
+        return lorem;
+    }
+}
+
+class InsideADream extends ADream
+{
+    int ipsum = -300;
+    int notmaineither()
+    {
+        /* Checking dispatch */
+//        this.ipsum = (this.ipsum + super.getLorem());
+        super.getLorem();
+    }
+}
+
+class Mai extends InsideADream
+{
+    void notmain() {}
+}
+
+class Strink
+{
+    int len = 35;
+    int[] array = new int[10];
+
+    void anotherMethod (String whatever)
+    {
+        var brray = new int[300];
+
+        // wrong assignment type
+        brray[123] = "wrong type";
+
+        //this should work;
+        array = brray;
+
+        return;
+    }
+
+    int getLength(int param1, int param2)
+    {
+        var the = 77;
+        the = (the * 2);
+
+        this.len = the / 10;
+
+        return this.len;
+    }
+}
+
+class AAA
+{
+    Strink prepend = new Strink();
+    //faulty assignment
+    int notastring = "stirng";
+    int[] somearray = new int[55];
+    int badarray = new int[23];
+
+    int strlen(Strink str)
+    {
+        // doesn't exits
+        super.nothing = 4;
+        
+        // field unresolvable
+        this.cantresolve;
+
+        // method unresolvable
+        this.doesntexist();
+
+        // not first term in ref
+        this.super.this.nothing;
+
+        //faulty assignment
+        prepend = 8;
+
+        // faulty array assigment;
+        prepend = new int[33];
+
+        // faulty array assignment;
+        somearray = prepend;
+
+        return this.prepend.len + str.getLength(1, 2);
+    }
+}
+
+class Main
+{
+    int ipsum;
+    AAA foo = new AAA();
+
+    void main(int struth)
+    {
+        var dolor = new Strink();
+        // does not exist
+        var boo = this.wrong.prepend.len + 60;
+
+        //Dispatch
+        // too many parameters
+        ipsum = foo.strlen(dolor, "too many parameters") + boo;
+
+        // method does not exist
+        foo.strln();
+
+        //invalid paramter type
+        foo.strlen("wrong type");
+
+        return;
+    }
+
+    //
+    void errorReturn1() {
+        return 35;
+    }
+
+    // should return something
+    int errorReturn2() { }
+
+    // should return something
+    int errorReturn3() {
+        return;
+    }
+
+    // return not last stmt
+    int errorReturn4() {
+        return;
+        var someOtherFinlStmt = 60;
+    }
+}

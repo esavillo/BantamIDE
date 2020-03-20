@@ -1,0 +1,7 @@
+class Foo {
+    int[] <-- (int[]) add = [](int[] list) --> int[] { 
+        var len = list.length;
+        
+        return list;
+    };
+}

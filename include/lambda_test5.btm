@@ -1,0 +1,17 @@
+class Main {
+    int <-- (int[], int) add = [](int []x, int y)->int { return x[y]; };
+
+    void main() {     
+
+        // addd2 takes in an int and returns a lambda that takes an int
+        // and returns an int
+        //
+        // @closure this (Main)
+        // @param int x
+        // @return lambda that takes in an int and returns an int
+        var add2 = [this](int x)-> int <-- (int) {
+            var inner_lambda =  [](int y)->int{ return this.add(x,y);};
+            return inner_lambda;
+        };
+    }
+}

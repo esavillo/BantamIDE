@@ -1,0 +1,34 @@
+class Main
+{
+    TextIO out = new TextIO();
+
+    void lorem(int i) {}
+
+    void main()
+    {
+        var sum = 0;
+        var i = 0;
+
+        for (i = 0; i < 5; ++i) {
+//            i = 23;
+//            lorem(i);
+            sum = sum + i;
+        }
+
+//        i = 0;
+//        while (i > 0) {
+//            sum = sum + i;
+//            --i;
+//        }
+
+        this.out.putString("Sum: ");
+        this.out.putInt(sum);
+//
+//        for (i = 0; i < 10; ++i) {
+//            sum = sum + i;
+//        }
+//
+//        this.out.putString("Sum: ");
+//        this.out.putInt(sum);
+    }
+}

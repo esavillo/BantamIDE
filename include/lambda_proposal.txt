@@ -1,0 +1,95 @@
+## ------      Lambda Proposal Brainstorm       ------- ##
+
+A lambda is an anonymous function object, or closure, a best of both worlds compromise between a function pointer and a function object. Contrary to popular belief, not all lambdas are anonymous and not all anonymous functions are lambdas.
+
+Places of usage:
+* params to functions (higher order functions)
+* assigned to variables (first class)
+* immediately invoked (IIFE) 
+* capture/encapsulate data (closure)
+* returned from functions (currying)
+
+Parts:
+* capture clause (C++)
+* parameter list (lambda declarator)
+* return type
+* body
+
+Questions:
+* higher order lambdas... can lambdas take lambdas? (they can in C++)
+* return type explicit or deduced?
+* syntax, what should this look like?
+* limited to just a single expression, or should it be able to have an entire body?
+
+References:
+* C++ (https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=vs-2019)
+* Python (https://www.w3schools.com/python/python_lambda.asp)
+* C# (https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)
+* Java8 (https://www.geeksforgeeks.org/lambda-expressions-java-8/)
+* JavaScript (https://medium.com/@chineketobenna/lambda-expressions-vs-anonymous-functions-in-javascript-3aa760c958ae)
+* Haskell (https://wiki.haskell.org/Anonymous_function)
+* OCAML (https://www.cs.cornell.edu/courses/cs3110/2014sp/recitations/3/rec03.html)
+
+Required Changes to the Codebase:
+* Lexar
+   * accept some new symbols
+* Parser
+   * new grammar rules and update accordingly
+* Semantic Analysis
+   * ensure lambdas formatted correctly and are passed around sanely, into and out of functions
+* Code Generation
+   * yeah... idk yet lol
+
+## -----------------------------------------------------##
+
+ROB's Lambda Proposal:
+
+Functionality:
+   * Can be passed to functions and returned
+   * Can act as a closure
+   * Can be assigned to variables
+   * Have bodies - allowed more than one expression/statement like a normal function
+
+Syntax:
+
+   int[] filter((int)->(bool) f, int[] is) {
+       int len = 0;
+       int i = 0;
+       int[] rs = [];
+
+       for (i = 0; i < is.length(); i ++) {
+          if (f(is[i]) {
+            rs[len] = is[i];
+            len ++;
+          }
+       }
+
+       return rs;
+   }
+
+   int[] map((int)->(int) f, int[] is) {
+        int i = 0;
+        for (i = 0; i < is.length(); i ++) {
+              is[i] = f(is[i]);
+        }
+
+        return is;
+   }
+
+   var i = 10;
+   
+   // type: (int)->(int)    infered
+   var add_ten = (int x) -> {
+                    var return_value = x + i;
+                    return return_value;
+                  };
+
+   // type: (int)->(bool)   infered
+   var is_ten = (int x) -> { return x == 10; }
+   
+   int[] is = [0,0,1,2,3,4,5]; // [0,0,1,2,3,4,5]
+   is = map(add_ten, is);      // [10,10,11,12,13,14,15]
+   is = filter(is_ten, is);    // [10,10]
+
+
+

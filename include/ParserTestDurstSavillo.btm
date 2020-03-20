@@ -1,0 +1,310 @@
+/*
+ * File: ParserTestAbulhabFengMaoSavillo.btm
+ * F18 CS361 Project 10
+ * Names: Melody Mao, Zena Abulhab, Yi Feng, Evan Savillo
+ * Date: 12/7/2018
+ * Test file for parser with all Bantam syntax rules
+ * We are aware that it would make more sense for individual professors
+ * to be instances of the Professor class instead of subclasses, but
+ * this setup seemed more amusing.
+ */
+
+
+class Professor
+{
+    String[] classes;
+
+    String getClass(int i)
+    {
+        return this.classes[i];
+    }
+}
+
+
+class Dale extends Professor
+{
+    void shiverWithJoy()
+    {
+        {
+
+        }
+
+        return;
+    }
+
+    String refactor(String oldCode)
+    {
+        var elegant = false;
+        var newCode = "";
+
+        shudderWithRevulsion();
+
+        while (!elegant)
+        {
+            newCode = oldCode + "improvements";
+        }
+
+        return newCode;
+    }
+
+    int shudderWithRevulsion()
+    {
+        return 42 + 42 - 42;
+    }
+}
+
+
+class Stephanie extends Professor
+{
+    String sendProjectFeedback(String studentName, int grade)
+    {
+        if (studentName.contains("z") || (true && 0 != 15 / 5 - 3))
+        {
+            var sameName = cast(String, studentName);
+            var nameIsString = sameName instanceof String;
+            print(sameName, grade);
+            --grade;
+        }
+        else
+        {
+            ++--++grade;
+        }
+
+        studentName.toLowerCase().substring(0, 5).charAt();
+
+        return "Well done!";
+    }
+}
+
+
+class Ying extends Professor
+{
+    boolean onSabbatical = true;
+
+    void a(int x, int y, String and, int z)
+    {
+        foo();
+        this.foo(1, 2, buckle, my, "shoe");
+        myArray.length;
+        myArray.bar = 599; // ?
+        super.something[23] = another[3].pro("found", 2 * (3 / 4));
+        this.lorem.ipsum("parameter");
+        (this.parenthetical(thing[43])).sit;
+        "this should also work".length;
+    }
+}
+
+
+class Zadia extends Professor
+{}
+
+
+//the following version of the Bruce class tests have comments in arbitrary places
+class Bruce extends Professor/*loremipsum*/
+        /*loremipsum*/
+{
+    int numAlpacas = (15 - 67) * 400 ;
+    int numLlamas/*loremipsum*/ = 1/*loremipsum*/;
+    int numBurros = 2;
+    int numTurkeys = 1;
+
+    String/*loremipsum*/[] fixSegFaults/*loremipsum*/()
+    {
+        /*loremipsum*/
+        var solutions = new String[numLlamas + numTurkeys];
+        var /*loremipsum*/i = 0;
+        var j = 0;
+        var k/*loremipsum*/ = 0;
+
+        super.classes = new String/*loremipsum*/[/*loremipsum*/5/*loremipsum*/];
+
+        for (i = 0; i < 7; i++)
+        {
+            super.classes[i] = "more CS";
+            solutions[i] = "stack overflow";
+        }
+
+        for (; i <= 14; i++)
+        {
+            for (j = 0; ; j--)
+            {
+                if (j > -7)
+                    break;
+
+                for (k = 0; k >= 7; )
+                {
+                    k--;
+                }
+            }
+        }
+
+        return solutions;
+    }
+
+    String shear/*loremipsum*/()
+    {
+        var/*loremipsum*/tooCold = false;
+        if (this.numAlpacas == 15 && !tooCold)
+        {
+            /*loremipsum*/
+            this.numTurkeys = this.numTurkeys * 3 / 2 + (this.numBurros % 1);
+            return/*loremipsum*/ "snip snip"/*loremipsum*/;
+        }
+        else
+        {
+            return "wait wait";
+        }
+    }
+
+    /*loremipsum*/Professor hire(/*loremipsum*/)
+    {
+        return new/*loremipsum*/ Professor(/*loremipsum*/)/*loremipsum*/;
+    }
+}
+
+
+class Dream
+{
+    void main()
+    {
+//	"more strings".whatever("ok");
+        "string do".something("on these", "parameters".and("this one too"));
+    }
+
+    boolean findTruth(String[] everything)
+    {
+        var theTruth = true;
+
+        var i = 0;
+        for (; i != 2; i++)
+        {
+            theTruth = theTruth && everything[i];
+        }
+
+        foo();
+        this.foo();
+        myArray.length;
+        myArray.bar = 599;
+        this.lorem.ipsum("para", "meter");
+        (this.parenthetical(thing[43]));
+        "this should also work".length;
+
+        return theTruth;
+    }
+}
+
+
+class Main extends Dream
+{
+    int main()
+    {
+        //should be illegal
+//	lorem()();
+//	var x = ipsum()[1];
+//	var y = dolor[2]();
+//	sit[3] = amet[4][5];
+
+    }
+
+    void main(String[] args)
+    {
+
+        var i = -9;
+        var j = 5000;
+        var k = 0;
+        while (false || !(dream && i < 0 && j > 0))
+        {
+            System.out.println("what..." + i);
+            i++;
+            --j;
+            break;
+        }
+
+        /**
+         * chew chew chew chew chewing gum
+         */
+
+        if (i >= 7 || j <= 22 || k == 0)
+        {
+            i = i * 10 / 2 % 5;
+            j = i / 10;
+            k = i + j - k;
+        }
+        else {}
+
+        return 0;
+
+        if (m instanceof String)
+            n = cast(m, AnotherString);
+        else
+        {
+            n = new Papaya();
+        }
+
+        var o = new String[7];
+    }
+
+}
+
+//we go up up we go up
+
+/* less comment-ridden version of the Bruce class
+class Bruce extends Professor
+{
+	int numAlpacas = 15;
+	int numLlamas = 1;
+	int numBurros = 2;
+	int numTurkeys = 1;
+	
+	String[] fixSegFaults()
+	{
+		var solutions = new String[numLlamas + numTurkeys];
+		var i = 0;
+		var j = 0;
+		var k = 0;
+		
+		super.classes = new String[5];
+		
+		for (i = 0; i < 7; i++)
+		{
+			super.classes[i] = "more CS";
+			solutions[i] = "stack overflow";
+		}
+		
+		for (; i <= 14; i++)
+		{
+			for (j = 0;; j--)
+			{
+				if (j > -7)
+					break;
+				
+				for (k = 0; k >= 7;)
+				{
+					k--;
+				}
+			}
+		}
+		
+		return solutions;
+	}
+	
+	String shear()
+	{
+		var tooCold = false;
+		if (this.numAlpacas == 15 && !tooCold)
+		{
+			this.numTurkeys = this.numTurkeys * 3 / 2  + (this.numBurros % 1);
+			return "snip snip";
+		}
+		else
+		{
+			return "wait wait";
+		}
+	}
+	
+	Professor hire()
+	{
+		return new Professor();
+	}
+}
+*/
